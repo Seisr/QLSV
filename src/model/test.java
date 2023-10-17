@@ -17,7 +17,7 @@ public class test {
 //        DanhSachSinhVien.insert(sv1);
 //        SinhVien sv2 = new SinhVien(1, "O", 9024, "10", "99 LBT");
 //        DanhSachSinhVien.update(sv2);
-        SinhVien sv3 = new SinhVien(1,"O",9024,"10","99 LBT");
-        DanhSachSinhVien.delete(sv3);
+//        SinhVien sv3 = new SinhVien(1,"O",9024,"10","99 LBT");
+//        DanhSachSinhVien.delete(sv3);
     }
 }

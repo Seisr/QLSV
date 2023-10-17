@@ -33,10 +33,10 @@ public class DanhSachSinhVien {
     public static int update(SinhVien sv) throws SQLException {
         JDBC db = new JDBC();
         String updateSQL = "UPDATE SINHVIEN"
-                + " SET TENSV='" + sv.getTenSV() + "'"
+                + " SET TENSV=N'" + sv.getTenSV() + "'"
                 + ",SODT='" + sv.getSoDT() + "'"
-                + ",LOP='" + sv.getLop() + "'"
-                + ",DIACHI='" + sv.getDiaChi() + "'"
+                + ",LOP=N'" + sv.getLop() + "'"
+                + ",DIACHI=N'" + sv.getDiaChi() + "'"
                 + "WHERE MSSV='" + sv.getMSSV() + "'";
         System.out.println(updateSQL);
         int kq = db.executeUpdate(updateSQL);
@@ -44,10 +44,10 @@ public class DanhSachSinhVien {
         return kq;
     }
 
-    public static int delete(SinhVien sv) throws SQLException {
+    public static int delete(int MSSV) throws SQLException {
         JDBC db = new JDBC();
         String deleteSQL = "DELETE FROM SINHVIEN"
-                + " WHERE MSSV='" + sv.getMSSV() + "'";
+                + " WHERE MSSV='" + MSSV + "'";
         int kq = db.executeUpdate(deleteSQL);
 //        db.close();
         return kq;
