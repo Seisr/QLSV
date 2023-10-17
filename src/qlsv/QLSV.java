@@ -6,7 +6,7 @@ package qlsv;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import model.JDBC;
+import JDBC.JDBC;
 
 /**
  *
