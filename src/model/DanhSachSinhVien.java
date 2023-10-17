@@ -26,7 +26,7 @@ public class DanhSachSinhVien {
                 + sv.getLop() + "',N'"
                 + sv.getDiaChi() + "') ";
         int kq = db.executeUpdate(insertSQL);
-        db.close();
+//        db.close();
         return kq;
     }
 
@@ -40,7 +40,7 @@ public class DanhSachSinhVien {
                 + "WHERE MSSV='" + sv.getMSSV() + "'";
         System.out.println(updateSQL);
         int kq = db.executeUpdate(updateSQL);
-        db.close();
+//        db.close();
         return kq;
     }
 
@@ -49,14 +49,14 @@ public class DanhSachSinhVien {
         String deleteSQL = "DELETE FROM SINHVIEN"
                 + " WHERE MSSV='" + sv.getMSSV() + "'";
         int kq = db.executeUpdate(deleteSQL);
-        db.close();
+//        db.close();
         return kq;
     }
 
     public static ResultSet selectAll() throws SQLException {
         JDBC db = new JDBC();
         ResultSet rs = db.executeQuery("SELECT * FROM SINHVIEN");
-        db.close();
+//        db.close();
         return rs;
     }
 
